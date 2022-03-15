@@ -7,7 +7,7 @@ Basic WIDS (only for deauth atacks)
 
 
 # Dependencies
-	apt-get install thshark
+	apt-get install tshark
 	pip install pyshark
 	pip install termcolor
 
