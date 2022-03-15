@@ -6,11 +6,11 @@ Basic WIDS (only for deauth atacks)
 
 
 
-Installation
-	apt-get install pkg-config libnl-3-dev libnl-genl-3-dev libpcap-dev 
+# Dependecies
+	apt-get install thshark
+	pip install pyshark
+	pip install termcolor
 
-	git clone https://github.com/aircrack-ng/mdk4
-	cd mdk4
-	make
-	sudo make install
-	# Using Arch Linux (and derived) append `CC=clang` after any `make` in commands. 
+# Usage
+	python3 WiProtect.py
+	
