@@ -1,6 +1,7 @@
 import pyshark
 import os
 import sys
+import time
 
 from termcolor import colored
 
@@ -31,7 +32,7 @@ print(style.GREEN + '''
                                                                                                           
 ''')
 #effetct blink on text
-import time
+
 for _ in range(5):
     for x in range (4): # three dots
         string = "Waiting for packets" + "." * x + "   "
