@@ -1,6 +1,7 @@
 import pyshark
 import os
 import sys
+
 from termcolor import colored
 
 
@@ -29,7 +30,13 @@ print(style.GREEN + '''
      \/  \/   |_|_|   |_|  \___/ \__\___|\___|\__|
                                                                                                           
 ''')
-print(style.GREEN + "Listening..." , end = '\n\n')
+#effetct blink on text
+import time
+for _ in range(5):
+    for x in range (4): # three dots
+        string = "Waiting for packets" + "." * x + "   "
+        print (style.GREEN +string, end="\r")
+        
 
 
 captureAndFilter = pyshark.LiveCapture(interface='wlan0mon',display_filter = 'wlan.fixed.reason_code != 0x0003') #reason code correctly is 0x0003
